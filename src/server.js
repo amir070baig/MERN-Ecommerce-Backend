@@ -1,6 +1,7 @@
 // 1. Import required modules
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
@@ -12,7 +13,7 @@ const paymentRoutes = require("./routes/paymentRoutes");
 const app = express();
 
 // 3. Load environment variables
-dotenv.config();
+// dotenv.config();
 
 // 4. Middlewares
 app.use(express.json()); // allows JSON request body
